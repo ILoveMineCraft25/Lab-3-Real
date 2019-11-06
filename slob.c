@@ -658,31 +658,31 @@ void __init kmem_cache_init_late(void)
 //Lab 3
 
 asmlinkage long sys_get_slob_amt_claimed(void) {
-	long out = 0;
+	long output = 0;
 	int i = 0;
 
 	for(i = 0; i < 100; i++) 
 	{
-		out = out + claimed_memory[i];
+		output = output + claimed_memory[i];
 	}
 
-	out = out/100;
+	output = output/100;
 
-	return out;
+	return output;
 }
 
 asmlinkage long sys_get_slob_amt_free(void) {
-	long out = 0;
+	long output = 0;
 	int i = 0;
 
 	for(i = 0; i < 100; i++)
 	{
-		out = out + free_memory[i];
+		output = output + free_memory[i];
 	}
 
-	out = out/100;
+	output = output/100;
 
-	return out;
+	return output;
 }
 
 //Lab 3
